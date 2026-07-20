@@ -3,7 +3,7 @@ import numpy as np
 import pandas
 import sklearn
 import pickle
-import webbrowser
+
 
 model = pickle.load(open('model.pkl','rb'))
 sc = pickle.load(open('standscaler.pkl','rb'))
@@ -47,5 +47,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    webbrowser.open("http://127.0.0.1:5000")
-    app.run(host="127.0.0.1", port=5000, debug=True, use_reloader=False)
+    app.run(debug=True)
